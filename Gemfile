@@ -16,5 +16,9 @@ group :development, :test do
   gem 'spring'
   gem 'spring-commands-rspec'
   gem 'rspec-rails'
+
+  gem 'guard-rspec'
+  gem 'guard-bundler'
+  gem 'ruby_gntp'
 end
 
