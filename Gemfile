@@ -18,6 +18,7 @@ group :development, :test do
   gem 'spring'
   gem 'spring-commands-rspec'
   gem 'rspec-rails'
+  gem 'capybara'
 
   gem 'guard-rspec'
   gem 'guard-bundler'
