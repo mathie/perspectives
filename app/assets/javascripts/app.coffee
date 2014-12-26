@@ -1,0 +1,1 @@
+perspectives = angular.module('perspectives', [])

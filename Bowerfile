@@ -1,2 +1,3 @@
 asset 'bootstrap-sass-official'
-asset 'angularjs'
+asset 'angular'
+asset 'angular-route'
