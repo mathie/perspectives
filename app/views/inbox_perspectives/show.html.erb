@@ -1,15 +1,15 @@
-<% content_for :title, "#{@inbox_perspective.name} (Inbox)" %>
+<% content_for :title, "#{@perspective.name} (Inbox)" %>
 
 <% content_for :toolbar do %>
-  <%= link_to 'Edit', [ :edit, @inbox_perspective ], class: 'btn btn-primary' %>
-  <%= link_to 'Delete', perspective_path(@inbox_perspective), method: :delete, class: 'btn btn-danger' %>
+  <%= link_to 'Edit', [ :edit, @perspective ], class: 'btn btn-primary' %>
+  <%= link_to 'Delete', perspective_path(@perspective), method: :delete, class: 'btn btn-danger' %>
 <% end %>
 
-<%= simple_format @inbox_perspective.description %>
+<%= simple_format @perspective.description %>
 
 <h2>Details</h2>
 
 <dl>
   <dt>Show Items</dt>
-  <dd><%= @inbox_perspective.show_items.humanize %></dd>
+  <dd><%= @perspective.show_items.humanize %></dd>
 </dl>
