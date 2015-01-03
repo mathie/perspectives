@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  [ :inbox, :projects, :contexts, :flagged ].each do |perspective|
+  [ :inbox, :projects, :contexts, :flagged, :review ].each do |perspective|
     resources "#{perspective}_perspectives", only: [ :show, :new, :create, :edit, :update, :destroy ]
   end
   resources :perspectives, only: [ :index ] do
