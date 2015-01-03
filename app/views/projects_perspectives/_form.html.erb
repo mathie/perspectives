@@ -1,0 +1,11 @@
+<%= render 'shared/errors', model: projects_perspective %>
+
+<%= bootstrap_form_for projects_perspective do |f| %>
+  <%= f.text_field :name %>
+  <%= f.text_area :description %>
+
+  <%= f.select :show_items, ProjectsPerspective.show_items.map { |k, v| [k.humanize, k] } %>
+  <%= f.check_box :show_folders_in_outline %>
+
+  <%= f.submit %>
+<% end %>

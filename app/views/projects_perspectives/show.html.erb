@@ -1,0 +1,18 @@
+<% content_for :title, "#{@projects_perspective.name} (Projects)" %>
+
+<% content_for :toolbar do %>
+  <%= link_to 'Edit', [ :edit, @projects_perspective ], class: 'btn btn-primary' %>
+  <%= link_to 'Delete', perspective_path(@projects_perspective), method: :delete, class: 'btn btn-danger' %>
+<% end %>
+
+<%= simple_format @projects_perspective.description %>
+
+<h2>Details</h2>
+
+<dl>
+  <dt>Show Items</dt>
+  <dd><%= @projects_perspective.show_items.humanize %></dd>
+
+  <dt>Show folders in outline</dt>
+  <dd><%= @projects_perspective.show_folders_in_outline? ? "Yes" : "No" %></dd>
+</dl>
