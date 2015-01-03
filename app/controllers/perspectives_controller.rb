@@ -52,7 +52,7 @@ class PerspectivesController < ApplicationController
   end
 
   def klass
-    raise "Subclass must specify the class name"
+    self.class.name.sub(/sController$/, '').constantize
   end
 
   def perspective_fields
