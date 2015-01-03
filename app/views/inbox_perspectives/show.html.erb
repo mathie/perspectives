@@ -1,15 +1,6 @@
-<% content_for :title, "#{@perspective.name} (Inbox)" %>
-
-<% content_for :toolbar do %>
-  <%= link_to 'Edit', [ :edit, @perspective ], class: 'btn btn-primary' %>
-  <%= link_to 'Delete', @perspective, method: :delete, class: 'btn btn-danger' %>
+<%= render layout: 'perspectives/show', locals: { perspective: @perspective } do |perspective| %>
+  <dl>
+    <dt>Show Items</dt>
+    <dd><%= perspective.show_items.humanize %></dd>
+  </dl>
 <% end %>
-
-<%= simple_format @perspective.description %>
-
-<h2>Details</h2>
-
-<dl>
-  <dt>Show Items</dt>
-  <dd><%= @perspective.show_items.humanize %></dd>
-</dl>
