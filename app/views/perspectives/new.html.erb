@@ -1,3 +1,9 @@
 <% content_for :title, 'New perspective' %>
 
-<%= render 'form', perspective: @perspective %>
+<p>
+  Which kind of perspective would you like to add?
+</p>
+
+<ul>
+  <li><%= link_to 'Inbox perspective', new_inbox_perspective_path %></li>
+</ul>

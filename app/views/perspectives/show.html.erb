@@ -1,8 +1,0 @@
-<% content_for :title, @perspective.name %>
-
-<% content_for :toolbar do %>
-  <%= link_to 'Edit', edit_perspective_path(@perspective), class: 'btn btn-primary' %>
-  <%= link_to 'Delete', @perspective, method: :delete, class: 'btn btn-danger' %>
-<% end %>
-
-<%= simple_format @perspective.description %>
