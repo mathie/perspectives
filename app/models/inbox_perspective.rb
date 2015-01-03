@@ -1,4 +1,4 @@
-class InboxPerspective < Perspective
+class InboxPerspective < BuiltInPerspective
   enum show_items: [
     :available_items,
     :remaining_items,

@@ -1,4 +1,4 @@
-class ProjectsPerspective < Perspective
+class ProjectsPerspective < BuiltInPerspective
   enum show_items: [
     :first_available_item,
     :available_items,

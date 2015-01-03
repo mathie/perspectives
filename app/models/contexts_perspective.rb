@@ -1,4 +1,4 @@
-class ContextsPerspective < Perspective
+class ContextsPerspective < BuiltInPerspective
   enum show_items: [
     :first_available_item,
     :available_items,
