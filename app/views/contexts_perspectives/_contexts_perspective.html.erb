@@ -1,0 +1,8 @@
+<%= div_for context_perspective do %>
+  <h2>
+    <%= link_to context_perspective.name, context_perspective %>
+    <small>Context</small>
+  </h2>
+
+  <%= simple_format context_perspective.description %>
+<% end %>

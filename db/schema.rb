@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150103142249) do
+ActiveRecord::Schema.define(version: 20150103152423) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 20150103142249) do
     t.string   "type",                                    null: false
     t.integer  "show_items",              default: 1
     t.boolean  "show_folders_in_outline", default: false, null: false
+    t.integer  "sort_items_by"
   end
 
 end
