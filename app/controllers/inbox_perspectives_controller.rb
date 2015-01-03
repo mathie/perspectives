@@ -1,14 +1,14 @@
 class InboxPerspectivesController < ApplicationController
   def show
-    @inbox_perspective = InboxPerspective.find(params.require(:id))
+    @inbox_perspective = klass.find(params.require(:id))
   end
 
   def new
-    @inbox_perspective = InboxPerspective.new
+    @inbox_perspective = klass.new
   end
 
   def create
-    @inbox_perspective = InboxPerspective.new(inbox_perspective_params)
+    @inbox_perspective = klass.new(perspective_params)
     if @inbox_perspective.save
       redirect_to @inbox_perspective, notice: 'Perspective successfully created.'
     else
@@ -17,12 +17,12 @@ class InboxPerspectivesController < ApplicationController
   end
 
   def edit
-    @inbox_perspective = InboxPerspective.find(params.require(:id))
+    @inbox_perspective = klass.find(params.require(:id))
   end
 
   def update
-    @inbox_perspective = InboxPerspective.find(params.require(:id))
-    if @inbox_perspective.update_attributes(inbox_perspective_params)
+    @inbox_perspective = klass.find(params.require(:id))
+    if @inbox_perspective.update_attributes(perspective_params)
       redirect_to @inbox_perspective, notice: 'Perspective successfully updated.'
     else
       render 'edit'
@@ -31,7 +31,15 @@ class InboxPerspectivesController < ApplicationController
 
   private
 
-  def inbox_perspective_params
-    params.require(:inbox_perspective).permit(:name, :description, :show_items)
+  def perspective_params
+    params.require(klass.name.underscore).permit(perspective_fields)
+  end
+
+  def klass
+    InboxPerspective
+  end
+
+  def perspective_fields
+    [:name, :description, :show_items]
   end
 end
