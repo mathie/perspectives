@@ -3,6 +3,7 @@
 <%= bootstrap_form_for perspective do |f| %>
   <%= f.text_field :name, readonly: perspective.read_only_name? %>
   <%= f.text_area :description %>
+  <%= f.check_box :shown_in_sidebar %>
 
   <%= yield f %>
 

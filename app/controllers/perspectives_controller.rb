@@ -56,6 +56,6 @@ class PerspectivesController < ApplicationController
   end
 
   def perspective_fields
-    [:name, :description]
+    [ :name, :description, :shown_in_sidebar ]
   end
 end
