@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150103162106) do
+ActiveRecord::Schema.define(version: 20150103173513) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,6 +28,13 @@ ActiveRecord::Schema.define(version: 20150103162106) do
     t.boolean  "shown_in_sidebar",        default: false, null: false
     t.integer  "show_projects"
     t.integer  "sort_projects_by"
+    t.integer  "group_projects_by"
+    t.boolean  "open_in_a_new_window",    default: false, null: false
+    t.integer  "filter_by_status"
+    t.integer  "filter_by_availability"
+    t.integer  "filter_by_duration"
+    t.integer  "filter_projects"
+    t.string   "find_text"
   end
 
 end
